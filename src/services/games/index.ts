@@ -9,9 +9,14 @@ export async function getGames() {
   return await gamesRepository.getGames();
 }
 
+async function updateFinishedGame(gameId: number, finishedGame: Game) {
+
+}
+
 const gamesService = {
   createGame,
   getGames,
+  updateFinishedGame,
 };
 
 export default gamesService;

@@ -5,5 +5,6 @@ const gamesRouter = Router();
 
 gamesRouter.post("/", createGame);
 gamesRouter.get("/", getGames);
+gamesRouter.post("/:id/finish");
 
 export default gamesRouter;

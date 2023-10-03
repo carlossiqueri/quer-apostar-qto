@@ -9,13 +9,23 @@ async function createGame(homeTeamName: string, awayTeamName: string) {
   });
 }
 
-export async function getGames() {
+async function getGames() {
   return await prisma.game.findMany();
 }
+
+async function getGameById(id: number) {
+  return await prisma.game.findFirst({
+    where: { id },
+  });
+}
+
+async function updateFinishedGame() {}
 
 const gamesRepository = {
   createGame,
   getGames,
+  getGameById,
+  updateFinishedGame,
 };
 
 export default gamesRepository;

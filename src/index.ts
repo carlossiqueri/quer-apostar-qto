@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import { health } from "./routers";
 import participantsRouter from "./routers/participants-router";
 import gamesRouter from "./routers/games-router";
+import betsRouter from "./routers/bets-router";
 
 dotenv.config();
 
@@ -11,7 +12,8 @@ app
   .use(express.json())
   .use("/health", health)
   .use("/participants", participantsRouter)
-  .use("/games", gamesRouter);
+  .use("/games", gamesRouter)
+  .use("/bets", betsRouter);
 
 const port: number = parseInt(process.env.PORT) || 5000;
 
