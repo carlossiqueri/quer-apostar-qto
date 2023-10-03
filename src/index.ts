@@ -13,7 +13,7 @@ app
   .use("/health", health)
   .use("/participants", participantsRouter)
   .use("/games", gamesRouter)
-  .use("/bets", betsRouter);
+  .use("/bets", betsRouter)
 
 const port: number = parseInt(process.env.PORT) || 5000;
 

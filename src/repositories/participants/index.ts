@@ -32,7 +32,7 @@ const participantsRepository = {
   createParticipant,
   getParticipants,
   getParticipantById,
-  updateBalance
+  updateBalance,
 };
 
 export default participantsRepository;

@@ -47,7 +47,7 @@ model Bet {
   participant   Participant @relation(fields: [participantId], references: [id])
   participantId Int
   status        Status      @default(PENDING)
-  amouontWon    Int?
+  amountWon    Int?
 }
 
 enum Status {
