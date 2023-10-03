@@ -6,6 +6,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "start": "node src/index.js",
+    "dev:load-envs": "dotenv -e .env",
+    "dev:seed": "npm run dev:load-envs prisma db seed",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
