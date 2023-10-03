@@ -1,15 +1,15 @@
 import { Game } from "@prisma/client";
-import Joi from "joi";
+import * as joi from "joi";
 
 
-const createGameSchema = Joi.object<Game>({
-  homeTeamName: Joi.string().required(),
-  awayTeamName: Joi.string().required(),
+const createGameSchema = joi.object<Game>({
+  homeTeamName: joi.string().required(),
+  awayTeamName: joi.string().required(),
 });
 
-const finishGameSchema = Joi.object<Game>({
-  homeTeamScore: Joi.number().required(),
-  awayTeamScore: Joi.number().required(),
+const finishGameSchema = joi.object<Game>({
+  homeTeamScore: joi.number().required(),
+  awayTeamScore: joi.number().required(),
 });
 
 const gamesSchema = {

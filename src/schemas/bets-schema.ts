@@ -1,12 +1,12 @@
 import { Bet } from "@prisma/client";
-import Joi from "joi";
+import * as joi from "joi";
 
-const createBetSchema = Joi.object<Bet>({
-  homeTeamScore: Joi.number().required(),
-  awayTeamScore: Joi.number().required(),
-  amountBet: Joi.number().required(),
-  gameId: Joi.number().required(),
-  participantId: Joi.number().required(),
+const createBetSchema = joi.object<Bet>({
+  homeTeamScore: joi.number().required(),
+  awayTeamScore: joi.number().required(),
+  amountBet: joi.number().required(),
+  gameId: joi.number().required(),
+  participantId: joi.number().required(),
 });
 
 const betSchema = {

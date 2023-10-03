@@ -1,6 +1,6 @@
-import Joi from "joi";
+import * as joi from "joi";
 
-export const createParticipantSchema = Joi.object({
-  name: Joi.string().required(),
-  balance: Joi.number().min(1000).required(),
+export const createParticipantSchema = joi.object({
+  name: joi.string().required(),
+  balance: joi.number().min(1000).required(),
 });
