@@ -27,8 +27,8 @@ export async function createParticipant(req: Request, res: Response) {
 
 export async function getParticipants(req: Request, res: Response) {
   try {
-    const participant = await participantsService.getParticipants();
-    return res.status(OK).send(participant);
+    const participants = await participantsService.getParticipants();
+    return res.status(OK).send(participants);
   } catch (error) {
     res.status(INTERNAL_SERVER_ERROR).send(error);
   }
