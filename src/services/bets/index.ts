@@ -5,21 +5,21 @@ import { FORBIDDEN } from "http-status";
 import gamesRepository from "../../repositories/games";
 
 async function createBet(bet: Bet) {
-    const {amountBet, gameId, participantId} = bet;
-    const { balance } = await participantsRepository.getParticipantById(participantId);
-    const {isFinished} = await gamesRepository.getGameById(gameId);
+  const { amountBet, gameId, participantId } = bet;
+  const { balance } =
+    await participantsRepository.getParticipantById(participantId);
+  const { isFinished } = await gamesRepository.getGameById(gameId);
 
-    // TODO: create errors for this two error cases
-    if(amountBet > balance) throw FORBIDDEN;
-    if (isFinished  === true) throw FORBIDDEN;
+  if (amountBet > balance) throw FORBIDDEN;
+  if (isFinished === true) throw FORBIDDEN;
 
-    const createBet  = await betsRepository.createBet(bet);
+  const createBet = await betsRepository.createBet(bet);
 
-    const updatedBalance = balance - amountBet;
+  const updatedBalance = balance - amountBet;
 
-    await participantsRepository.updateBalance(participantId, updatedBalance);
+  await participantsRepository.updateBalance(participantId, updatedBalance);
 
-    return createBet;
+  return createBet;
 }
 
 const betsService = {

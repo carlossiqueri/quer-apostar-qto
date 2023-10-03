@@ -13,7 +13,7 @@ async function createParticipant(participant: Participant) {
 }
 
 async function getParticipants() {
-    return await participantsRepository.getParticipants();
+  return await participantsRepository.getParticipants();
 }
 
 const participantsService = {
