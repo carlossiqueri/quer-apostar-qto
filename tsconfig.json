@@ -23,6 +23,6 @@
     "build"
   ],
   "include": [
-    "src/**/*"
+    "src/**/*", "prisma"
   ]
 }
