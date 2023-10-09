@@ -7,11 +7,11 @@
     "build": "tsc -p tsconfig.build.json",
     "start": "node src/index.js",
     "dev:load-envs": "dotenv -e .env",
-    "seed": "npm run dev:load-envs prisma db seed",
     "dev": "nodemon src/index.ts"
   },
   "prisma":{
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "schema": "db/schema.prisma"
   },
   "keywords": [],
   "author": "",
