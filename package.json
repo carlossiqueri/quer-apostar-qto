@@ -14,7 +14,6 @@
     "seed": "prisma/seed.ts",
     "schema": "prisma/schema.prisma"
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
