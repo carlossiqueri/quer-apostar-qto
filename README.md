@@ -12,7 +12,5 @@ Technical challenge developed using Node.js, TypeScript, Prisma ORM, and Postgre
  ## Running the app:
 `npm run dev`
 
-
-
-
-
+## Find the app deployed at:
+https://quer-apostar-qto.onrender.com
